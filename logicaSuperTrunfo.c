@@ -14,6 +14,11 @@ float area1, area2;           // Área da cidade em km².
 float pib1, pib2;             // PIB da cidade em bilhões de reais.
 int tourist_pt1, tourist_pt2; // Número de pontos turísticos.
 
+// Funções
+void cards();
+void displayCards();
+void compareCards();
+
 int main()
 {
     // Definição das variáveis para armazenar as propriedades das cidades
@@ -51,6 +56,7 @@ int main()
     // printf("A cidade vencedora é: %s\n", cidadeVencedora);
 
     displayCards(); // Mostrar cartas.
+    compareCards();
 
     return 0;
 }
@@ -147,8 +153,40 @@ void displayCards()
     printf("Número de Pontos Turísticos: %d\n", tourist_pt2); // Exibe o número de pontos turísticos.
 }
 
-void compareCards(){
+void compareCards()
+{
+    // Marcar pontos das cartas.
+    int score1 = 0, score2 = 0;
 
-    
+    // População.
+    if (population1 > population2)
+        score1++;
+    else if (population2 > population1)
+        score2++;
 
+    // Area.
+    if (area1 > area2)
+        score1++;
+    else if (area2 > area1)
+        score2++;
+
+    // Pib.
+    if (pib1 > pib2)
+        score1++;
+    else if (pib2 > pib1)
+        score2++;
+
+    // Pontos turisticos.
+    if (tourist_pt1 > tourist_pt2)
+        score1++;
+    else if (tourist_pt2 > tourist_pt1)
+        score2++;
+
+    printf("\nResultado da comparação:\n");
+    if (score1 > score2)
+        printf("A cidade vencedora é: %s\n", name1);
+    else if (score2 > score1)
+        printf("A cidade vencedora é: %s\n", name2);
+    else
+        printf("Empate!\n");
 }
