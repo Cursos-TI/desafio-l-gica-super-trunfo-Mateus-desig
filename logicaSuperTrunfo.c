@@ -131,26 +131,15 @@ void cards()
 // Mostrar cartas.
 void displayCards()
 {
-
-    // Exibindo os dados da primeira carta.
+    // Exibe os detalhes da primeira carta.
     printf("\nCarta 1:\n");
-    printf("Estado: %c\n", state1);                           // Exibe um caractere representando o estado.
-    printf("Código: %s\n", code1);                            // Exibe a string do código da carta.
-    printf("Nome da Cidade: %s\n", name1);                    // Exibe o nome da cidade.
-    printf("População: %d\n", population1);                   // Exibe a população inteira.
-    printf("Área: %.2f km²\n", area1);                        // Exibe a área com duas casas decimais.
-    printf("PIB: %.2f bilhões de reais\n", pib1);             // Exibe o PIB com duas casas decimais.
-    printf("Número de Pontos Turísticos: %d\n", tourist_pt1); // Exibe o número de pontos turísticos.
+    printf("Estado: %c\nCódigo: %s\nNome da Cidade: %s\nPopulação: %d\nÁrea: %.2f km²\nPIB: %.2f bilhões de reais\nPontos Turísticos: %d\nDensidade Populacional: %.2f hab/km²\nPIB per Capita: %.2f bilhões de reais\n",
+           state1, code1, name1, population1, area1, pib1, tourist_pt1, population1 / area1, pib1 / population1);
 
-    // Exibindo os dados da segunda carta.
+    // Exibe os detalhes da segunda carta.
     printf("\nCarta 2:\n");
-    printf("Estado: %c\n", state2);                           // Exibe um caractere representando o estado.
-    printf("Código: %s\n", code2);                            // Exibe a string do código da carta.
-    printf("Nome da Cidade: %s\n", name2);                    // Exibe o nome da cidade.
-    printf("População: %d\n", population2);                   // Exibe a população inteira.
-    printf("Área: %.2f km²\n", area2);                        // Exibe a área com duas casas decimais.
-    printf("PIB: %.2f bilhões de reais\n", pib2);             // Exibe o PIB com duas casas decimais.
-    printf("Número de Pontos Turísticos: %d\n", tourist_pt2); // Exibe o número de pontos turísticos.
+    printf("Estado: %c\nCódigo: %s\nNome da Cidade: %s\nPopulação: %d\nÁrea: %.2f km²\nPIB: %.2f bilhões de reais\nPontos Turísticos: %d\nDensidade Populacional: %.2f hab/km²\nPIB per Capita: %.2f bilhões de reais\n",
+           state2, code2, name2, population2, area2, pib2, tourist_pt2, population2 / area2, pib2 / population2);
 }
 
 void compareCards()
